@@ -24,8 +24,8 @@ import HomeScreen from './src/screens/Home';
 const App: () => Node = () => {
   return (
     <>
-      <StatusBar barStyle={'dark-content'} />
-      <SafeAreaView>
+      <StatusBar barStyle={'light-content'} />
+      <SafeAreaView style={{flex: 1, backgroundColor: 'black'}}>
         <HomeScreen />
       </SafeAreaView>
     </>

@@ -1,10 +1,11 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import Post from '../../components/Post';
 
 const HomeScreen = () => {
     return (
         <View>
-            <Text>Home page</Text>
+            <Post />
         </View>
     );
 };
