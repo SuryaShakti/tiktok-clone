@@ -33,9 +33,7 @@ const Post = (props) => {
             <TouchableWithoutFeedback onPress={onPlayPausePress}>
                 <View>
                     <Video
-                        source={{
-                            uri: 'https://d8vywknz0hvjw.cloudfront.net/fitenium-media-prod/videos/45fee890-a74f-11ea-8725-311975ea9616/proccessed_720.mp4'
-                        }}
+                        source={{ uri: post.videoUri }}
                         style={styles.video}
                         resizeMode={'cover'}
                         repeat={true}
@@ -48,42 +46,42 @@ const Post = (props) => {
                         <View style={styles.rightContainer}>
                             <Image
                                 style={styles.profilePicture}
-                                source={{ uri: 'https://miro.medium.com/fit/c/1360/1360/1*I-rnOsWRz_5WnlXCpV9jJQ.jpeg' }}
+                                source={{ uri: post.user.imageUri }}
                             />
 
                             <TouchableOpacity style={styles.iconContainer} onPress={onLikePress}>
                                 <AntDesign name={'heart'} size={40} color={isLiked ? 'red' : 'white'} />
-                                <Text style={styles.statsLabel}>{'245'}</Text>
+                                <Text style={styles.statsLabel}>{post.likes}</Text>
                             </TouchableOpacity>
 
                             <View style={styles.iconContainer}>
                                 <FontAwesome name={'commenting'} size={40} color="white" />
-                                <Text style={styles.statsLabel}>{'123'}</Text>
+                                <Text style={styles.statsLabel}>{post.comments}</Text>
                             </View>
 
                             <View style={styles.iconContainer}>
                                 <Fontisto name={'share-a'} size={35} color="white" />
-                                <Text style={styles.statsLabel}>{12}</Text>
+                                <Text style={styles.statsLabel}>{post.shares}</Text>
                             </View>
                         </View>
 
                         <View style={styles.bottomContainer}>
                             <View>
                                 <Text style={styles.handle}>
-                                    {'@SuryaShakti'}
+                                    {`@${post.user.username}`}
                                 </Text>
                                 <Text style={styles.description} >
-                                    {'Description of the post will be dislayed here'}
+                                    {post.description}
                                 </Text>
                                 <View style={styles.songContainer}>
                                     <Entypo style={styles.songIcon} name={'beamed-note'} size={24} color={'white'} />
-                                    <Text style={styles.songName}>{'Nf - The Search'}</Text>
+                                    <Text style={styles.songName}>{post.songName}</Text>
                                 </View>
                             </View>
 
                             <Image
                                 style={styles.songImage}
-                                source={{ uri: 'https://miro.medium.com/fit/c/1360/1360/1*I-rnOsWRz_5WnlXCpV9jJQ.jpeg' }}
+                                source={{ uri: post.songImage }}
                             />
                         </View>
                     </View>
