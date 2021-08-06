@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
     uiContainer: {
         height: '100%',
         justifyContent: 'flex-end',
+        // backgroundColor: 'rgba(255, 255, 255, 0.8)'
     },
     bottomContainer: {
         padding: 10,
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
         height: 50,
         borderRadius: 25,
         borderWidth: 5,
-        borderColor: '#4c4c4c',
+        borderColor: '#282828',
     },
     songName: {
         color: '#fff',
